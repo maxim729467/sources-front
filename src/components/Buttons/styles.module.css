@@ -1,0 +1,31 @@
+.editFolderIcon,
+.addFolderIcon,
+.removeFolderIcon,
+.addSourceIcon,
+.editSourceIcon,
+.removeSourceIcon {
+  cursor: pointer;
+}
+
+.editFolderIcon:hover,
+.addFolderIcon:hover,
+.removeFolderIcon:hover,
+.addSourceIcon:hover,
+.editSourceIcon:hover,
+.removeSourceIcon:hover {
+  transform: scale(1.2);
+}
+
+.addFolderIcon {
+  position: relative;
+  left: 90%;
+}
+
+.editFolderIcon,
+.editSourceIcon {
+  margin-right: 20px;
+}
+
+.addSourceIcon {
+  margin-left: 20px;
+}

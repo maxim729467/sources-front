@@ -1,0 +1,16 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  width: 50vw;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgb(0, 0, 117);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgba(88, 88, 88, 0.158);
+}

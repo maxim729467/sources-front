@@ -1,0 +1,33 @@
+.sourceItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sourceLink {
+  color: rgb(15, 0, 151);
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 250ms ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  position: relative;
+  top: 10px;
+}
+
+.icon {
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+}
+
+.sourceLink:hover,
+.sourceLink:focus {
+  color: rgb(151, 122, 255);
+}

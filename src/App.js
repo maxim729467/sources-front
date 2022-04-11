@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/store";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
+import Container from "@material-ui/core/Container";
+import NavBar from "./components/NavBar";
+import SectionsGrid from "./components/Grid";
+import SourceBar from "./components/SourceBar";
+import CommonModal from "./components/Modal/Modal";
+import "@fontsource/roboto";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <React.Fragment>
+          <Container>
+            <NavBar />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<SectionsGrid />} />
+                <Route path="/:name" element={<SourceBar />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </BrowserRouter>
+          </Container>
+          <CommonModal />
+        </React.Fragment>
+      </PersistGate>
+    </Provider>
   );
-}
+};
 
 export default App;
